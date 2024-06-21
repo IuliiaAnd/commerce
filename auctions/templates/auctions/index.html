@@ -1,0 +1,27 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="main-section">
+        <h2>Active Listings</h2>
+        <section class="listings-grid">
+            {% for listing in listings %}
+            {% if listing.active %}    
+                <div class="listing-container">            
+                    <div class="image-container">
+                        <img class="card-img" src="{{ listing.image.url }}" alt ="{{ listing.title }}">
+                    </div>
+                    <div class="listing-content">
+                        <h5 class="card-title"><a href="{% url 'listing_page' listing.id %}">{{ listing.title }}</a>
+                        </h5>                
+                        <p>Category: {{ listing.category }}</p>
+                        <p>{{ listing.date }} by {{ listing.author }}</p>                              
+                    </div>           
+                    <div class="current-bid">
+                        Current Bid ${{ listing.starting_price }}
+                    </div>                                  
+                </div>
+            {% endif %}                 
+            {% endfor %}
+        </section>
+    </div>    
+{% endblock %}

@@ -1,0 +1,310 @@
+body {
+    padding: 10px;
+    background-color: rgb(250, 249, 249);
+    font-family: Roboto, sans-serif;    
+}
+.main-section{
+    padding: 1.5rem;
+    display: block;
+}
+h2{
+    margin-bottom: 20px;
+}
+.top-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.flex-main{
+    display: flex;
+    flex-direction: row;
+    width: 85vw;
+    justify-content: space-between;    
+}
+.listing-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.listing-content{
+    padding: 10px;
+    margin: 0;
+}
+.listing-content p{
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 0;
+    color: #909090;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.current-bid{
+    align-self: flex-end;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    color: rgb(253, 6, 92);
+}
+ .listings-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
+    gap:40px;
+    padding: 20px;    
+
+ }
+.listing-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(140, 140, 140);
+    border-radius: 20px;
+    margin-bottom: 50px;
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: all 0.3s;
+    overflow: hidden;
+    max-width: 300px;
+    margin: 0;
+    
+    &:hover {      
+      box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);    
+    }
+}
+.card-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.card-title a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        color: #007bff;
+    }
+}
+.image-container{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+    height: 240px;
+}
+@media (max-width: 768px) {
+    .listings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.listing-page{
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+}
+button {
+    outline: 0;
+    background: none;
+    border: 1px solid #d9d9d9;
+    padding: 8px 0px;
+    color: #515151;
+    text-transform: uppercase;
+    width: auto;
+    font-family: inherit;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-wrap: none;
+    padding: 10px 20px 10px 20px;    
+    
+        &:hover {
+        border: 1px solid #333333;
+        color: #909090;
+        cursor: pointer;
+    }
+}
+.winner-message{
+    background-color: rgb(251, 70, 70);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.auction-container{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    justify-content: space-between;
+    width: 50vw;
+}
+.auction-container p{
+    font-size: 13px;
+    font-weight: 100;
+    margin: 0;
+}
+p.details{
+    font-size: initial;
+    font-weight: initial;
+    margin-bottom: 10px;
+}
+.auction-page-image{
+    height: 500px;
+}
+.new-bid-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;   
+}
+.new-bid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: 400px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.new-bid input[type="text"],
+.new-bid input[type="number"],
+.comment-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.comment-form label{
+    display: none;
+}
+.comment-container{
+    display: block;
+    width:50vw;
+    background-color: white;
+    padding: 1rem;
+} 
+
+.watchlist_form{
+    margin-bottom: 20px;
+}
+
+.bids_history{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 50px;
+    padding: 10px;
+}
+.recent_bids_container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    align-items: center;
+}
+.bid-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.new-listing-form-container{
+    display: block;
+    box-sizing: border-box;
+    width: 50vw;
+    padding: 1.5rem;
+}
+
+.new-listing-form{
+    background-color: white;
+    padding: 1rem;    
+}
+
+.new-listing-form input,
+.new-listing-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.new-listing-form input[type="submit"] {
+    outline: 0;
+    background: none;
+    border: 1px solid #d9d9d9;
+    padding: 8px 0px;
+    color: #515151;
+    text-transform: uppercase;
+    width: 125px;
+    font-family: inherit;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    
+        &:hover {
+        border: 1px solid #333333;
+        color: #909090;
+        cursor: pointer;
+    }
+}
+.comments{
+    padding: 1.5rem;
+}
+.comments-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.comment-item{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 50vw;
+    margin-bottom: 10px;
+}
+.comment-item p{
+    color: rgb(175, 175, 175);
+    font-weight: 100;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.info-closed-au{
+    background-color: rgb(251, 70, 70);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    align-items: center;
+
+}
+.you-won{
+    background-color: rgb(255, 230, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    animation: pulse 2s infinite;    
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
